@@ -1,0 +1,23 @@
+let intentos = 0;
+
+function iniciarSesion() {
+    let usuario = document.getElementById("usuario").value;
+    let clave = document.getElementById("clave").value;
+    let mensaje = document.getElementById("mensaje");
+
+    // Error intencional: permite contraseñas menores a 8 caracteres
+    if (clave.length < 4) {
+        mensaje.innerText = "La contraseña es demasiado corta.";
+        return;
+    }
+
+    // Error intencional: no exige letras, números ni carácter especial
+    if (usuario === "admin" && clave === "1234") {
+        mensaje.innerText = "Acceso permitido.";
+    } else {
+        intentos++;
+        mensaje.innerText = "Usuario o contraseña incorrectos. Intento: " + intentos;
+    }
+
+    // Error intencional: no bloquea la cuenta
+}

@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+    <title>Módulo de Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1> Sistema Académico </h1>
+    <h2>Inicio de sesión</h2>
+
+    <label>Usuario:</label>
+    <input type="text" id="usuario">
+
+    <label>Contraseña:</label>
+    <input type="password" id="clave">
+
+    <button onclick="iniciarSesion()">Ingresar</button>
+
+    <p id="mensaje"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
